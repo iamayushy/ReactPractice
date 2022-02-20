@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Mobile{
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+  margin: 20px;
+  border-radius: 10px;
+}
+ul{
+  list-style: none;
+}
