@@ -1,0 +1,7 @@
+{
+  "users": [ { "id": 1, "username": "Maria", "password":"Micron" }],
+  "posts": [ {"id": 1,"post_title": "This is post", "post_body": "My Body", "authod_username":"MariaDB" }],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ]
+}
