@@ -2,23 +2,30 @@ import { useEffect, useState } from "react"
 
 const Box = () => {
     const [quote, setQuote] = useState([])
-    useEffect(() => {
-      ()=>  fetch('https://www.quotepub.com/api/widget/?type=rand&limit=1',{
-            method:'GET',
-            mode:'cors',
-            headers:'headers'
-    
-        })
+    function getUsers(){
+        fetch('https://fakestoreapi.com/products/')
         .then(res => res.json())
-        .then(ans => {
-           return console.log(ans)
-        })
-        .catch(err => console.log(err))
-        .th
+        .then(ans => {setQuote(ans) })
+    }
+    useEffect(() => {
+        getUsers()
     }, [])
+    
+
     return(
-        <div>
-            <h1>{quote}</h1>
+        <div className="main">
+        
+            {
+               quote.map(user => {
+                 return(
+                     <section id="card" key={user.id}>
+                          <img src={user.image}/>
+                          <p>Price :${user.price}</p>
+                          <h5>{user.title}</h5>  
+                     </section>
+                 )
+               })
+            }
         </div>
     )
 }
