@@ -2,18 +2,23 @@ import { useEffect, useState } from "react"
 
 const Box = () => {
     const [quote, setQuote] = useState([])
+    const [load, setLoad] = useState(true);
     function getUsers(){
+        setLoad(false)
         fetch('https://fakestoreapi.com/products/')
         .then(res => res.json())
-        .then(ans => {setQuote(ans) })
+        .then(ans => {setQuote(ans) 
+            setLoad(true) })
     }
     useEffect(() => {
         getUsers()
+        
     }, [])
     
 
-    return(
-        <div className="main">
+    return load === false?(<h1 style={{textAlign:'center', fontSize:'3rem'}}>🔃 Loading...</h1>):
+        
+        (<div className="main">
         
             {
                quote.map(user => {
@@ -26,8 +31,10 @@ const Box = () => {
                  )
                })
             }
-        </div>
-    )
+        </div>)
+        
+    
+    
 }
 
 export {Box}
