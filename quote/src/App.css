@@ -3,13 +3,14 @@ body{
   padding: 0;
 }
 img{
-  width: 180px;
+  width: 50%;
 
 }
 
 #card{
   text-align: center;
   border: 1px solid gray;
+  border-radius: 18px;
 
 }
 .main{
