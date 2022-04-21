@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import { ThemeContext } from './Context/ThemeContext'
 import './index.css'
-import {Auth} from './Context/Auth'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Auth>
+    <ThemeContext>
     <App />
-    </Auth>
+    </ThemeContext>
+    
+  
   </React.StrictMode>
 )
