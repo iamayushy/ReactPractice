@@ -1,5 +1,5 @@
 import man from '../assets/man.png'
-import arrow from '../assets/right.png'
+import arrow from '../assets/angle-right.svg'
 import graph from '../assets/growth.png'
 import message from '../assets/messages.png'
 import sett from '../assets/settings.png'
